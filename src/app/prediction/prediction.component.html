@@ -1,0 +1,31 @@
+<!-- <div>
+  <h1>Predict using ML Model</h1>
+  <form [formGroup]="form" (ngSubmit)="getPrediction()">
+    <!-- <div formArrayName="features" *ngFor="let feature of features.controls | keyvalue">
+      <label [for]="feature">Feature {{feature}}:</label>
+      <input [id]="'feature' + i" [formControlName]="i" required> -->
+
+   ÷
+<!-- <div class="container">
+  <h1>Input Form</h1> -->
+  <!-- <form [formGroup]="form" (ngSubmit)="getPrediction()">
+    <div *ngFor="let control of form.controls | keyvalue">
+      <label [for]="control.key">{{ control.key }}</label>
+      <input type="number" [formControlName]="control.key" [id]="control.key">
+    </div>
+    <button type="submit" [disabled]="form.invalid">Get Prediction</button>
+  </form> -->
+<!-- </div> -->
+<div class="container">
+  <h1>ML Prediction Form</h1>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div *ngFor="let control of form.controls | keyvalue">
+      <label [for]="control.key">{{ control.key }}</label>
+      <input type="number" [formControlName]="control.key" [id]="control.key">
+    </div>
+    <button type="submit" [disabled]="form.invalid">Predict</button>
+  </form>
+  <div *ngIf="prediction">
+    <h2>Prediction Result: {{ prediction }}</h2>
+  </div>
+</div>
